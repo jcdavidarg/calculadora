@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import freeCodeCampLogo from "../src/imagenes/freecode.png";
 import Boton from "./componentes/Boton";
@@ -48,7 +49,7 @@ function App() {
           <Boton manejarClic={agregarInput}>/</Boton>
         </div>
         <div className="fila">
-          <BotonClear />
+          <BotonClear manejarClear={() => setInput("")} />
         </div>
       </div>
     </div>

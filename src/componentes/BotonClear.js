@@ -1,8 +1,12 @@
 import React from "react";
 import "../hojas-de-estilo/BotonClear.css";
 
-const BotonClear = () => {
-  return <div className="boton-clear">Clear</div>;
+const BotonClear = (props) => {
+  return (
+    <div className="boton-clear" onClick={props.manejarClear}>
+      Clear
+    </div>
+  );
 };
 
 export default BotonClear;
