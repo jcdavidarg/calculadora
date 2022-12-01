@@ -15,7 +15,15 @@ function App() {
   };
 
   const calcularResultado = () => {
-    if (input) {
+    //buscar dentro del array de letras si hay 2 operadores juntos
+    if (
+      input.includes("**") ||
+      input.includes("//") ||
+      input.includes("/*") ||
+      input.includes("*/")
+    ) {
+      alert("Realice una operación válida");
+    } else if (input) {
       setInput(evaluate(input));
     } else {
       alert("Por favor ingrese valores para realizar los cálculos");
